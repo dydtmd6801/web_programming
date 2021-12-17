@@ -1,0 +1,64 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+section {
+    width: 100%;
+    height: 100%; 
+    position: relative;
+    background-image: url("./../img/index_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section::before {
+    content: "";
+    opacity: 0.4;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: #000;
+}
+div {
+    position: relative;
+    color: #ddd;
+    text-align: center;
+}
+#index_title {
+    font-size: 4em;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+#index_content {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+}
+nav {
+    position: relative;
+    color: #ddd;
+    text-align: center;
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+nav > a {
+    text-decoration: none;
+    color: #ddd;
+    width: auto;
+    flex: 1;
+    font-size: .9em;
+    margin: 1%;
+    padding: 3% 4%;
+    border: 1px solid #ddd;
+}
+nav > a:hover {
+    background: #ddd;
+    color: black;
+}
