@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+body{
+    min-width: 1080px;
+}
+header {
+    width: 1200px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+header > p > a {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+}
+header > p > a:hover {
+    text-shadow: 3px 3px #ddd;
+}
+header > ul {
+    font-size: 1.0em;
+    display: flex;
+    flex-direction: row;
+    margin-right: 20px;
+}
+header > ul > li {
+    padding: 0 10px 0;
+}
+header > ul > li > a {
+    text-decoration: none;
+    color: black;
+}
+header > ul > li > a:hover {
+    text-shadow: 3px 3px #ddd;
+}
+.scrolling {
+    width: 100%;
+    height: 420px;
+    background-color: black;
+    background-image: url("./../img/movie1.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.scrolling > div {
+    margin: 0 3% 1% 0;
+}
+.scrolling > div > button {
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+    margin: 3px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: .8em;
+    font-weight: bold;
+    text-align: center;
+}
+.scrolling > div > button:hover{
+    background: rgba(255,255,255,0.7);
+    color: black;
+}
+.content_title {
+    font-size: 1.2em;
+    font-weight: bold;
+    width: 1080px;
+    margin: 0 auto;
+    height: 60px;
+    line-height: 60px;
+    font-family: "Noto Sans KR", sans-serif;
+}
+.content {
+    width: 1080px;
+    margin: 0 auto;
+}
+.total_zone {
+    width: 216px;
+    display: inline-block;
+}
+.img_zone {
+    text-align: center;
+    position: relative;
+}
+.img_sty {
+    width: 184px;
+    height: 262px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+/* .btn_sty{
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 16px;
+} */
+.hover_menu {
+    visibility: hidden;
+    width: 184px;
+    height: 262px;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 16px;
+    background: black;
+}
+.data_zone {
+    width: 160px;
+    height: 60px;
+    text-align: center;
+    margin: 0 auto;
+    font-family: "Noto Sans KR", sans-serif;
+}
+.data_zone > p:nth-child(1){
+    height: 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: "Noto Sans KR", sans-serif;
+}
+.data_zone > p:nth-child(2), .data_zone > p:nth-child(3){
+    display: inline-block;
+    font-size: 0.7em;
+    font-family: "Noto Sans KR", sans-serif;
+}
