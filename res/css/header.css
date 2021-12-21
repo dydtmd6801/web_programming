@@ -1,0 +1,35 @@
+header {
+    width: 1080px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+header > p > a {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+}
+header > p > a:hover {
+    text-shadow: 3px 3px #ddd;
+}
+header > ul {
+    font-size: 1.0em;
+    display: flex;
+    flex-direction: row;
+    margin-right: 20px;
+}
+header > ul > li {
+    padding: 0 10px 0;
+}
+header > ul > li > a {
+    text-decoration: none;
+    color: black;
+}
+header > ul > li > a:hover {
+    text-shadow: 3px 3px #ddd;
+}

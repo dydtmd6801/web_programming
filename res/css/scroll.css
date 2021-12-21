@@ -1,0 +1,41 @@
+@media screen and (max-width: 1080px) {
+    .scrolling{
+        width: 1080px;
+    }
+}
+@media screen and (min-width: 1080px){
+    .scrolling{
+        width: 100%;
+    }
+}
+.scrolling {
+    height: 420px;
+    background-color: black;
+    background-image: url("./../img/movie1.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.scrolling > div {
+    margin: 0 3% 1% 0;
+}
+.scrolling > div > button {
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+    margin: 3px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: .8em;
+    font-weight: bold;
+    text-align: center;
+}
+.scrolling > div > button:hover{
+    background: rgba(255,255,255,0.7);
+    color: black;
+}

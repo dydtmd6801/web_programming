@@ -2,73 +2,6 @@
 body{
     min-width: 1080px;
 }
-header {
-    width: 1200px;
-    height: 60px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-}
-header > p > a {
-    font-size: 1.5em;
-    font-weight: bold;
-    text-decoration: none;
-    color: black;
-    margin-left: 20px;
-}
-header > p > a:hover {
-    text-shadow: 3px 3px #ddd;
-}
-header > ul {
-    font-size: 1.0em;
-    display: flex;
-    flex-direction: row;
-    margin-right: 20px;
-}
-header > ul > li {
-    padding: 0 10px 0;
-}
-header > ul > li > a {
-    text-decoration: none;
-    color: black;
-}
-header > ul > li > a:hover {
-    text-shadow: 3px 3px #ddd;
-}
-.scrolling {
-    width: 100%;
-    height: 420px;
-    background-color: black;
-    background-image: url("./../img/movie1.jpg");
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: flex-end;
-}
-.scrolling > div {
-    margin: 0 3% 1% 0;
-}
-.scrolling > div > button {
-    width: 25px;
-    height: 25px;
-    border-radius: 15px;
-    margin: 3px;
-    background: none;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: .8em;
-    font-weight: bold;
-    text-align: center;
-}
-.scrolling > div > button:hover{
-    background: rgba(255,255,255,0.7);
-    color: black;
-}
 .content_title {
     font-size: 1.2em;
     font-weight: bold;
@@ -87,6 +20,9 @@ header > ul > li > a:hover {
     display: inline-block;
 }
 .img_zone {
+    width: 184px;
+    height: 262px;
+    margin: 0 auto;
     text-align: center;
     position: relative;
 }
@@ -96,12 +32,21 @@ header > ul > li > a:hover {
     border-radius: 10px;
     margin: 0 auto;
 }
-/* .btn_sty{
-    visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 16px;
-} */
+.btn_sty{
+    border: 2px solid white;
+    color: white;
+    font-size: .9em;
+    background: none;
+    border-radius: 5px;
+    width: 140px;
+    height: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn_sty:hover{
+    background: white;
+    color: black;
+}
 .hover_menu {
     visibility: hidden;
     width: 184px;
@@ -109,8 +54,10 @@ header > ul > li > a:hover {
     border-radius: 10px;
     position: absolute;
     top: 0;
-    left: 16px;
-    background: black;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .data_zone {
     width: 160px;
