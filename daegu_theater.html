@@ -7,149 +7,12 @@
     <link rel="stylesheet" href="./res/css/reset.css">
     <link rel="stylesheet" href="./res/css/header.css">
     <link rel="stylesheet" href="./res/css/scroll.css">
+    <link rel="stylesheet" href="./res/css/theater.css">
+    <script src="res/js/daegu_theater.js"></script>
     <title>대구 영화관</title>
     <script>
-        var movie = {
-            CGV : {
-                0 : {
-                    0 : "CGV대구수성",
-                    1 : "CGV대구스타디움",
-                    2 : "CGV대구아카데미",
-                    3 : "CGV대구연경"
-                },
-                1 : {
-                    0 : "CGV대구월성",
-                    1 : "CGV대구이시아",
-                    2 : "CGV대구칠곡",
-                    3 : "CGV대구한일"
-                },
-                2 : {
-                    0 : "CGV대구현대"
-                }
-            },
-            LOTTE : {
-                0 : {
-                    0 : "대구광장",
-                    1 : "대구율하",
-                    2 : "동성로",
-                    3 : "상인"
-                },
-                1 : {
-                    0 : "성서",
-                    1 : "프리미엄만경",
-                    2 : "프리미엄칠곡"
-                }
-            }
-        }
-        function load_table(){
-            var cgv_length = Object.keys(movie["CGV"]).length;
-            var lotte_length = Object.keys(movie["LOTTE"]).length;
-            var cgv_length_num = Object.keys(movie["CGV"][cgv_length - 1]).length;
-            var lotte_length_num = Object.keys(movie["LOTTE"][lotte_length - 1]).length;
-            var i, j;
-            var cgv_table_data = "", lotte_table_data = "";
-            for(i = 0; i < cgv_length; i++){
-                cgv_table_data += "<tr>";
-                if(Object.keys(movie["CGV"][i]).length == 4){
-                    for(j = 0; j < 4; j++){
-                        cgv_table_data += "<td>" + movie["CGV"][i][j] + "</td>";
-                    }
-                } else {
-                    for(j = 0; j < cgv_length_num; j++){
-                        cgv_table_data += "<td>" + movie["CGV"][i][j] + "</td>";
-                    }
-                }
-                cgv_table_data += "</tr>";
-            }
-            document.getElementById("table_cgv").innerHTML = cgv_table_data;
-            for(i = 0; i < lotte_length; i++){
-                lotte_table_data += "<tr>";
-                if(Object.keys(movie["LOTTE"][i]).length == 4){
-                    for(j = 0; j < 4; j++){
-                        lotte_table_data += "<td>" + movie["LOTTE"][i][j] + "</td>";
-                    }
-                } else {
-                    for(j = 0; j < lotte_length_num; j++){
-                        lotte_table_data += "<td>" + movie["LOTTE"][i][j] + "</td>";
-                    }
-                }
-                lotte_table_data += "</tr>";
-            }
-            document.getElementById("table_lotte").innerHTML = lotte_table_data;
-        }
 
-        function show_table(check_btn){
-            if(check_btn == "cgv"){
-                document.getElementById("table_cgv").style.visibility = "visible";
-                document.getElementById("table_lotte").style.visibility = "hidden";
-                if(document.getElementById("table_cgv").style.visibility == "visible"){
-                    document.getElementById("cgv_btn").style.background = "#ddd";
-                    document.getElementById("lotte_btn").style.background = "white";
-                }
-            }
-            if(check_btn == "lotte"){
-                document.getElementById("table_cgv").style.visibility = "hidden";
-                document.getElementById("table_lotte").style.visibility = "visible";
-                if(document.getElementById("table_lotte").style.visibility == "visible"){
-                    document.getElementById("lotte_btn").style.background = "#ddd";
-                    document.getElementById("cgv_btn").style.background = "white";
-                }
-            }
-        }
     </script>
-    <style>
-        section{
-            width: 1080px;
-            margin: 0 auto;
-        }
-        .content_view{
-            width: 1080px;
-            margin : 0 auto;
-        }
-        .table_view{
-            position: relative;
-        }
-        .table_view > table:nth-child(1){
-            position: absolute;
-            top: 0;
-            left: 0;
-            visibility: visible;
-        }
-        .table_view > table:nth-child(2){
-            position: absolute;
-            top: 0;
-            left: 0;
-            visibility: hidden;
-        }
-        .btn_zone{
-            width: 1080px;
-            height: 50px;
-            margin: 40px 0 40px 0;
-            display: flex;
-            flex-direction: row;
-        }
-        .btn_zone > button{
-            width: 540px;
-            background: white;
-            font-size: 1.1em;
-            font-weight: bold;
-            font-family: 'Gowun Batang', serif;
-            border: none;
-        }
-        .btn_zone > button:hover{
-            cursor: pointer;
-        }
-        .btn_zone > button:nth-child(1){
-            background: #ddd;
-        }
-        .table_view > table > tbody > tr > td{
-            width: 270px;
-            height: 50px;
-            text-align: center;
-            vertical-align: middle;
-            border: 1px solid #ddd;
-        }
-    </style>
 </head>
 <body onLoad="load_table()">
     <header>
@@ -169,19 +32,22 @@
         </div>
     </div>
     <section>
-        <div class="content_view">
-            <div class="btn_zone">
-                <button onclick="show_table('cgv')" id="cgv_btn">CGV</button>
-                <button onclick="show_table('lotte')" id="lotte_btn">롯데시네마</button>
-            </div>
-            <div class="table_view">
-                <table id="table_cgv">
+        <div class="btn_zone">
+            <button onclick="show_table('cgv')" id="cgv_btn">CGV</button>
+            <button onclick="show_table('lotte')" id="lotte_btn">롯데시네마</button>
+        </div>
+        <div class="table_view">
+            <table id="table_cgv" style="visibility:visible">
 
-                </table>
-                <table id="table_lotte">
+            </table>
+            <table id="table_lotte" style="visibility:hidden">
 
-                </table>
-            </div>
+            </table>
+            
+        </div>
+        <div id="google_map_zone">
+            <p id="google_map_subject"></p>
+            <div id="google_map_content"></div>
         </div>
     </section>
 </body>

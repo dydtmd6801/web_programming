@@ -1,0 +1,68 @@
+section{
+    width: 1080px;
+    margin: 0 auto;
+}
+.content_view{
+    width: 1080px;
+    margin : 0 auto;
+}
+.table_view{
+    position: relative;
+}
+.table_view > table:nth-child(1){
+    visibility: visible;
+}
+.table_view > table:nth-child(2){
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+.btn_zone{
+    width: 1080px;
+    height: 50px;
+    margin: 40px 0 40px 0;
+    display: flex;
+    flex-direction: row;
+}
+.btn_zone > button{
+    width: 540px;
+    background: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    font-family: 'Gowun Batang', serif;
+    border: none;
+}
+.btn_zone > button:hover{
+    cursor: pointer;
+}
+.btn_zone > button:nth-child(1){
+    background: #ddd;
+}
+.table_view > table > tbody > tr > td{
+    width: 270px;
+    height: 60px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+}
+.table_view > table > tbody > tr > td:hover{
+    background: #ddd;
+    color: black;
+}
+.table_view > table > tbody > tr > td > a{
+    font-size: 1.0em;
+    color: black;
+    text-decoration: none;
+}
+#google_map_zone{
+    margin: 0 auto;
+}
+#google_map_subject{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 20px 0 10px 0;
+}
+#google_map_content > iframe{
+    width: 1080px;
+}

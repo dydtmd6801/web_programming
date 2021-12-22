@@ -230,7 +230,7 @@ function show_modal(check_poster){
         <div class='modal_movie_data'>\
             <p>" + movieData[check_poster]["subject"] + "</p>\
             <p>" + movieData[check_poster]["eng-subject"] + "</p>\
-            <p>장르 :" + movieData[check_poster]["movie-type"] + "</p>\
+            <p>장르 : " + movieData[check_poster]["movie-type"] + "</p>\
             <p>감독 : " + movieData[check_poster]["director"] + "</p>\
             <p>배우 : " + movieData[check_poster]["actor"] + "</p>\
             <p>개봉 나라 : " + movieData[check_poster]["country"] + "</p>\
