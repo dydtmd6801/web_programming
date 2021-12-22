@@ -78,11 +78,11 @@ function load_table(){
         cgv_table_data += "<tr>";
         if(Object.keys(movie["CGV"][i]).length == 4){
             for(j = 0; j < 4; j++){
-                cgv_table_data += "<td><a href='#google_map_zone' onclick='show_google_map(\"" + movie["CGV"][i][j] + "\","+ i +","+ j +")'; return false;>" + movie["CGV"][i][j] + "</a></td>";
+                cgv_table_data += "<td><a href='#google_map_zone' onclick='show_google_map(\"" + movie["CGV"][i][j] + "\","+ i +","+ j +")'>" + movie["CGV"][i][j] + "</a></td>";
             }
         } else {
             for(j = 0; j < cgv_length_num; j++){
-                cgv_table_data += "<td><a href='#google_map_zone' onclick='show_google_map(\"" + movie["CGV"][i][j] + "\","+ i +","+ j +")'; return false;>" + movie["CGV"][i][j] + "</a></td>";
+                cgv_table_data += "<td><a href='#google_map_zone' onclick='show_google_map(\"" + movie["CGV"][i][j] + "\","+ i +","+ j +")'>" + movie["CGV"][i][j] + "</a></td>";
             }
         }
         cgv_table_data += "</tr>";
@@ -109,16 +109,20 @@ function show_table(check_btn){
         document.getElementById("table_cgv").style.visibility = "visible";
         document.getElementById("table_lotte").style.visibility = "hidden";
         if(document.getElementById("table_cgv").style.visibility == "visible"){
-            document.getElementById("cgv_btn").style.background = "#ddd";
+            document.getElementById("cgv_btn").style.background = "black";
+            document.getElementById("cgv_btn").style.color = "white";
             document.getElementById("lotte_btn").style.background = "white";
+            document.getElementById("lotte_btn").style.color = "black";
         }
     }
     if(check_btn == "lotte"){
         document.getElementById("table_cgv").style.visibility = "hidden";
         document.getElementById("table_lotte").style.visibility = "visible";
         if(document.getElementById("table_lotte").style.visibility == "visible"){
-            document.getElementById("lotte_btn").style.background = "#ddd";
+            document.getElementById("lotte_btn").style.background = "black";
+            document.getElementById("lotte_btn").style.color = "white";
             document.getElementById("cgv_btn").style.background = "white";
+            document.getElementById("cgv_btn").style.color = "black";
         }
     }
 }
