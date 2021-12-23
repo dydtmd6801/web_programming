@@ -2,7 +2,7 @@
     visibility: hidden;
     position: fixed;
     z-index: 1; 
-    padding-top: 100px; 
+    padding-top: 50px; 
     left: 0;
     top: 0;
     width: 100%; 
@@ -13,7 +13,7 @@
   
 .modal-content {
     background-color: white;
-    border-radius: 10px;
+    border-radius: 6px;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
@@ -49,15 +49,18 @@
     font-weight: bold;
 }
 .modal_movie_data > p:nth-child(2){
-    font-size: 1.2em;
+    font-size: 1.0em;
     margin-bottom: 10px;
+    color: #666666;
 }
 .modal_movie_data > p:not(.modal_movie_data > p:nth-child(1)):not(.modal_movie_data > p:nth-child(2)){
     font-size: .8em;
     margin: 3px;
 }
+.modal_movie_data > p:last-child{
+    line-height: 20px;
+}
 .modal_summary > p{
-    /* margin-top: 15px; */
     font-size: 0.9em;
     font-family: "Noto Sans KR", sans-serif;
 }
@@ -77,7 +80,7 @@
     font-size: 0.8em;
     font-weight: bold;
     font-family: "Noto Sans KR", sans-serif;
-    border-radius: 6px;
+    border-radius: 3px;
     padding: 10px 0;
     cursor: pointer;
 }

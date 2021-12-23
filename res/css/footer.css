@@ -1,0 +1,36 @@
+footer{
+    height: 200px;
+    width: 100%;
+    background: white;
+    border-top: 2px solid #ddd;
+    margin-top: 30px;
+}
+footer > div {
+    width: 1080px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    padding: 30px 0 0 0;
+}
+.footer_content{
+    width: 800px;
+}
+.footer_content > p:not(.footer_sub_subject){
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+.footer_link {
+    width: 280px;
+}
+.footer_sub_subject {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.footerImg {
+    width: 35px;
+    height: 35px;
+    margin: 0 10px 10px 0;
+    border-radius: 40px;
+}
